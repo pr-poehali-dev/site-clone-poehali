@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -7,6 +8,7 @@ import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
+  const navigate = useNavigate();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
@@ -70,6 +72,14 @@ const Index = () => {
                 className="hover-scale"
               >
                 Проект 2
+              </Button>
+              <Button
+                size="sm"
+                onClick={() => navigate('/auth')}
+                className="hover-scale"
+              >
+                <Icon name="LogIn" className="mr-2" size={16} />
+                Войти
               </Button>
             </div>
           </nav>

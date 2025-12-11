@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "name": "Setup admin password",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "password": "woy228228",
+        "email": "den.nazarenko.02@internet.ru"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

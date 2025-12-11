@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "Get statistics (requires admin token)",
+      "method": "POST",
+      "path": "/",
+      "headers": {
+        "X-Auth-Token": "test-admin-token"
+      },
+      "body": {
+        "action": "get_stats"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "totalUsers": "number",
+        "activeSessions": "number"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
